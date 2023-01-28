@@ -4,7 +4,9 @@ import java.util.List;
 
 public class Lion {
 
+
     boolean hasMane;
+    private Feline feline;
 
     public Lion(String sex) throws Exception {
         if ("Самец".equals(sex)) {
@@ -16,7 +18,10 @@ public class Lion {
         }
     }
 
-    Feline feline = new Feline();
+    public Lion(Feline feline) {
+        this.feline = feline; // объект попадает в переменную класса
+    }
+
 
     public int getKittens() {
         return feline.getKittens();
