@@ -19,7 +19,7 @@ public class LionTest {
     @Test
     public void testGetKittensReturnOne() throws Exception {
         int expected = 1;
-        Lion lion = new Lion(feline);
+        Lion lion = new Lion("Самец",feline);
         Mockito.when(feline.getKittens()).thenReturn(1);
         assertEquals(expected, lion.getKittens());
     }
@@ -38,7 +38,7 @@ public class LionTest {
 
     @Test
     public void testGetFoodReturnListOfMeat() throws Exception {
-        Lion lion = new Lion(feline);
+        Lion lion = new Lion("Самка",feline);
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         assertEquals(List.of("Животные", "Птицы", "Рыба"), lion.getFood());
     }

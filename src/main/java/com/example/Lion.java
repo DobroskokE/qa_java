@@ -3,8 +3,7 @@ package com.example;
 import java.util.List;
 
 public class Lion {
-
-
+    String sex;
     boolean hasMane;
     private Feline feline;
 
@@ -18,10 +17,14 @@ public class Lion {
         }
     }
 
-    public Lion(Feline feline) {
-        this.feline = feline; // объект попадает в переменную класса
-    }
+//    public Lion(Feline feline) {
+//        this.feline = feline; // объект попадает в переменную класса
+//    }
 
+    public  Lion(String sex, Feline feline) throws Exception  {
+        this.sex = sex; // объект попадает в переменную класса
+        this.feline = feline;
+    }
 
     public int getKittens() {
         return feline.getKittens();

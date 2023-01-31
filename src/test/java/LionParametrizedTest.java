@@ -16,7 +16,7 @@ public class LionParametrizedTest {
             this.expected = expected;
         }
 
-        @Parameterized.Parameters // добавили аннотацию
+        @Parameterized.Parameters(name = "Тестовые данные: {0} {1}") // добавили аннотацию
         public static Object[][] getSexData() {
             return new Object[][] {
                     { "Самец", true},
