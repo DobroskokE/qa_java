@@ -29,7 +29,7 @@ public class LionTest {
         String sex = "другой";
         String expected = "Используйте допустимые значения пола животного - самей или самка";
         try {
-            Lion  lion = new Lion(sex);
+            Lion  lion = new Lion(sex, feline);
             lion.doesHaveMane();
         } catch (Exception exception) {
             assertEquals(expected, exception.getMessage());
